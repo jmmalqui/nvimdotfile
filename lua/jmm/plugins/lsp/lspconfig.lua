@@ -69,7 +69,6 @@ return {
 
 		-- used to enable autocompletion (assign to every lsp server config)
 		local capabilities = cmp_nvim_lsp.default_capabilities()
-
 		-- local on_attach = cmp_nvim_lsp.
 		-- Change the Diagnostic symbols in the sign column (gutter)
 		-- (not in youtube nvim video)
@@ -151,7 +150,14 @@ return {
 			["clangd"] = function()
 				lspconfig["clangd"].setup({
 					capabilities = capabilities,
-					root_dir = vim.loop.cwd,
+					-- for KrakenEngine contributions
+					cmd = { "clangd", "--background-index", "--compile-commands-dir=builddir" },
+					-- root_dir = vim.loop.cwd,
+					root_dir = require("lspconfig").util.root_pattern(
+						"compile_commands.json",
+						"CMakeLists.txt",
+						".git"
+					),
 				})
 			end,
 		})
