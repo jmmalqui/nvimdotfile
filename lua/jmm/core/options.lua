@@ -1,4 +1,5 @@
 local opt = vim.opt
+
 opt.relativenumber = true
 opt.number = true
 opt.tabstop = 4
@@ -13,25 +14,24 @@ opt.ignorecase = true
 opt.smartcase = true
 
 opt.cursorline = false
-
 opt.winblend = 0
 opt.pumblend = 0
--- opt.background = "dark"
--- opt.signcolumn = "no"
+opt.background = "dark"
+opt.signcolumn = "no"
 
 opt.splitright = true
 opt.splitbelow = true
 
 opt.swapfile = false
+-- local colorscheme = "quiet"
 --
--- local colorscheme = "morning"
 -- local ok, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)
 -- vim.o.background = "dark" -- or "light" for light mode
 -- if not ok then
 -- 	vim.notify("colorscheme " .. colorscheme .. " not found!")
 -- 	return
 -- end
---
+
 local statusline = {
 	"%t",
 	"%r",

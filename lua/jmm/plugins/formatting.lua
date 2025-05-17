@@ -39,6 +39,12 @@ return {
 						}
 					end,
 				},
+				prettier = {
+					command = "prettier",
+					append_args = function()
+						return { "--tab-width=4" }
+					end,
+				},
 			},
 		})
 

@@ -27,9 +27,13 @@ local colorscheme = {
 	obscure = { "killitar/obscure.nvim", "obscure" },
 	nano = { "gaelph/nano.nvim", "nano" },
 	juli = { "kaiuri/nvim-juliana", "juliana" },
+	solarized = { "maxmx03/solarized.nvim", "solarized" },
+	monokai = { "ku1ik/vim-monokai", "monokai" },
+	naysay = { "jameswalls/naysayer.nvim", "naysayer" },
 }
 
-local using = colorscheme.juli
+local using = colorscheme.naysay
+-- return {}
 return {
 	using[1],
 	priority = 1000,
