@@ -2,10 +2,10 @@ local colorscheme = {
     naysay = { "jameswalls/naysayer.nvim", "naysayer" },
     catsayer = { "RostislavArts/naysayer.nvim", "naysayer" },
     frign = { "KimNorgaard/vim-frign", "frign" },
-    paper = { "yorickpeterse/vim-paper", "paper" },
+    paper = { "yorickpeterse/vim-paper", "paper" }
 }
 
-local using = colorscheme.catsayer
+local using = colorscheme.paper
 -- return {}
 return {
     using[1],
